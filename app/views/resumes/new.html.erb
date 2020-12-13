@@ -1,0 +1,16 @@
+<% if !@resume.errors.empty? %>
+  <div class = "alert alert-error">
+    <ul>
+        <li>Sorry, but you can upload only files with jpg, png and jpeg types</li>
+    </ul>
+  </div>
+<% end %>
+
+<div class = "well">
+  <%= form_for @resume, html: { multipart: true } do |f| %>
+    <%= f.label :file %>
+    <%= f.file_field :attachment %>
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  <% end %>
+</div>
+

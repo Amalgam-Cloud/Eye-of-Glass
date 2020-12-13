@@ -1,0 +1,4 @@
+
+<h1>Is it <%= @pred_label%>?</h1>
+<%= link_to "Yes", {:controller => :resumes, :action => :index}, class: "btn btn-primary" %>
+<%= link_to "No", {:controller => :resumes, :action => :change}, class: "btn btn-primary" %>

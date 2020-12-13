@@ -1,0 +1,8 @@
+<h1>That's interesting... So what it is?</h1>
+<div class = "well">
+  <%= form_for @resume, html: { multipart: true } do |f| %>
+    <%= f.label "True Label" %>
+    <%= f.text_field :true_label %>
+    <%= f.submit "Accept", class: "btn btn-primary" %>
+  <% end %>
+</div>
