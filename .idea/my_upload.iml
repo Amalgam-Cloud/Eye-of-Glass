@@ -13,18 +13,18 @@
     <shared />
   </component>
   <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/features" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/.bundle" />
-      <excludeFolder url="file://$MODULE_DIR$/components" />
-      <excludeFolder url="file://$MODULE_DIR$/log" />
-      <excludeFolder url="file://$MODULE_DIR$/public/packs" />
-      <excludeFolder url="file://$MODULE_DIR$/public/system" />
-      <excludeFolder url="file://$MODULE_DIR$/tmp" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/bundle" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/cache" />
+    <content url="file://$MODULE_DIR$/../Eye-of-Glass">
+      <sourceFolder url="file://$MODULE_DIR$/../Eye-of-Glass/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../Eye-of-Glass/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../Eye-of-Glass/features" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/../Eye-of-Glass/.bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/../Eye-of-Glass/components" />
+      <excludeFolder url="file://$MODULE_DIR$/../Eye-of-Glass/log" />
+      <excludeFolder url="file://$MODULE_DIR$/../Eye-of-Glass/public/packs" />
+      <excludeFolder url="file://$MODULE_DIR$/../Eye-of-Glass/public/system" />
+      <excludeFolder url="file://$MODULE_DIR$/../Eye-of-Glass/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/../Eye-of-Glass/vendor/bundle" />
+      <excludeFolder url="file://$MODULE_DIR$/../Eye-of-Glass/vendor/cache" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
