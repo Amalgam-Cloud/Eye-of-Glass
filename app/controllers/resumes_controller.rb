@@ -10,7 +10,6 @@ class ResumesController < ApplicationController
     @resume = Resume.new
   end
   def create
-    @message
     if(resume_params == nil)
       @resume = Resume.new()
       render "new"
