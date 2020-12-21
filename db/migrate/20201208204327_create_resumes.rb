@@ -3,6 +3,7 @@ class CreateResumes < ActiveRecord::Migration[6.0]
     create_table :resumes do |t|
       t.string :name
       t.string :attachment
+      t.references :user
       t.string :true_label
       t.string :pred_label
 

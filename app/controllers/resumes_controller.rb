@@ -4,7 +4,11 @@ class ResumesController < ApplicationController
     params.require(:user).permit(:email, :password, :name)
   end
   def index
-    @resumes = Resume.all
+    if(user_signed_in?)
+      @resumes = Resume.where(:user_id => User.find(current_user.id))
+    else
+      @resumes = Resume.where(:user_id => nil)
+    end
   end
   def new
     @resume = Resume.new
@@ -15,9 +19,11 @@ class ResumesController < ApplicationController
       render "new"
     else
       if(resume_params[:true_label] == nil)
+        ActionController::Parameters.permit_all_parameters = true
         file_name = (resume_params[:attachment]).original_filename
-        parampa = ActionController::Parameters.new(name:file_name,attachment: resume_params[:attachment],true_label: nil, pred_label: nil)
-        parampa= parampa.permit(:name,:true_label,:attachment,:pred_label)
+        cur_id = (user_signed_in?) ? User.find(current_user.id) : nil
+        parampa = ActionController::Parameters.new(name:file_name,attachment: resume_params[:attachment],true_label: nil, pred_label: nil, user: cur_id)
+        parampa= parampa.permit!
         @resume = Resume.new(parampa)
         if @resume.save
           redirect_to :controller => 'resumes', :action => 'result'
@@ -29,7 +35,7 @@ class ResumesController < ApplicationController
         if(resume_params[:true_label] != "")
           Resume.update(@res[:id], :true_label => resume_params[:true_label])
         end
-        redirect_to :controller => "resumes", :action => "index", notice: "The file #{@resume[:name]} will be inspected and proceed, as soon as it possible"
+        redirect_to :controller => "resumes", :action => "index", notice: "The file #{@res[:name]} will be inspected and proceed, as soon as it possible"
         end
       end
     end

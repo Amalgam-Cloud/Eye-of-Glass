@@ -1,7 +1,10 @@
 <% if !@resume.errors.empty? %>
   <div class = "alert alert-error">
     <ul>
-        <li>Sorry, but you can upload only files with jpg, png and jpeg types</li>
+      <% @resume.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      <li>Sorry, but you can upload only files with jpg, png and jpeg types</li>
     </ul>
   </div>
 <% end %>
